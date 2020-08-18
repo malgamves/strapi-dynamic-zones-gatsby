@@ -65,7 +65,7 @@ const IndexPage = ({ children }) => (
                 }
                 {dz.__typename === 'Strapi_ComponentModularImage' &&
                   <div>
-                      <img style={{maxWidth: 300}} src={`http://localhost:1337${dz.Image.url}`}/>
+                      <img style={{maxWidth: 300}} src={{dz.Image.url}}/>
                       <h5>{dz.Caption}</h5>
                    </div> 
                 }
