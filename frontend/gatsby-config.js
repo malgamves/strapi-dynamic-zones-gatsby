@@ -7,23 +7,11 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Your Awesome Portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Some text text text text here :p`,
     author: `@malgamves`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //  resolve: 'gatsby-source-strapi',
-    //     options: {
-    //      apiURL: process.env.API_URL || 'http://localhost:1337',
-    //     contentTypes: [
-           // List of the Content Types you want to be able to request from Gatsby.
-    //       'portfolios',
-    //       'portfolio'
-    //     ],
-    //     queryLimit: 1000
-    //   }
-    // },
     {
       resolve: "gatsby-source-graphql",
       options: {
@@ -34,7 +22,7 @@ module.exports = {
         // Url to query from
         url: process.env.API_URL
           ? `${process.env.API_URL}/graphql`
-          : "http://localhost:1337/graphql",
+          : "https://okaaaaaaayyy.herokuapp.com/graphql",
       },
     },
     {

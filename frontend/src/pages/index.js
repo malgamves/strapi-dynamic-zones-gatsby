@@ -1,8 +1,7 @@
 import React from "react"
-import { Link, StaticQuery } from "gatsby"
+import { StaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = ({ children }) => (
@@ -58,14 +57,14 @@ const IndexPage = ({ children }) => (
             {res.LegoLand.map((dz, j) => (
               <div key={j}>
                 {dz.__typename === 'Strapi_ComponentModularSocialMedia' &&
-                  <h2>   You have {dz.Site} </h2>
+                  <h2>I have <a href={dz.Link}>{dz.Site}</a> </h2>
                 }
                 {dz.__typename === 'Strapi_ComponentModularQuote' &&
-                  <h2> {dz.Quote} by {dz.Quoter}.</h2>
+                  <h2> "{dz.Quote}" by {dz.Quoter}.</h2>
                 }
                 {dz.__typename === 'Strapi_ComponentModularImage' &&
                   <div>
-                      <img style={{maxWidth: 300}} src={dz.Image.url}/>
+                      <img style={{maxWidth: 300}} src={dz.Image.url} alt={dz.Caption}/>
                       <h5>{dz.Caption}</h5>
                    </div> 
                 }
@@ -74,27 +73,11 @@ const IndexPage = ({ children }) => (
           </div>
         ))}
 
-        <Link to="/page-2/">Go to page 2</Link> <br />
       </Layout>
     )
     }
 
   />
 )
-{/* 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi </h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-*/}
 
 export default IndexPage
