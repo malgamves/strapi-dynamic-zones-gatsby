@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_modular_quotes",
+  "info": {
+    "name": "Quote",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Quote": {
+      "type": "string"
+    },
+    "Quoter": {
+      "type": "string"
+    }
+  }
+}

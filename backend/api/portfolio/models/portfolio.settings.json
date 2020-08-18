@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "name": "portfolio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "LegoLand": {
+      "type": "dynamiczone",
+      "components": [
+        "modular.image",
+        "modular.quote",
+        "modular.social-media"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

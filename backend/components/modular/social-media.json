@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_modular_social_medias",
+  "info": {
+    "name": "Social Media",
+    "icon": "at"
+  },
+  "options": {},
+  "attributes": {
+    "Site": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

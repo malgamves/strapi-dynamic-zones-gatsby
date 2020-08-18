@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_modular_images",
+  "info": {
+    "name": "Image",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Caption": {
+      "type": "string"
+    }
+  }
+}
